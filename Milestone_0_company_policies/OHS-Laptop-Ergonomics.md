@@ -36,12 +36,16 @@ Using Focus Bear
 ## Task
 ### Adjust your laptop setup based on ergonomic best practices.
 I adjusted my moniter height to be at my eye level.
+<img src="images/IMG_0753.JPG">
 
 ### Identify at least one piece of equipment that could improve your posture and comfort.
 Adjustable chair: I don't have this one but I would like to get it one day if I have enough monoey.
 
 ### Try using posture and movement reminders for a full workday and note any improvements. (Hint: Focus Bear has built-in reminders for movement breaks!)
 I used Quick Breaks (Stretch).
+
+<img src="images/IMG_0752.PNG" width=500>
+<img src="images/IMG_0751.PNG" width=500>
 
 ### Document at least one workspace change or habit adjustment you made
 I adjusted my moniter height to be at my eye level. I also started to take a 10 minutes break every time when I work on something.
