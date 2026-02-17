@@ -35,12 +35,18 @@ One practical change I can make is using clear and plain language. It conveys my
 
 ## Task
 ### Read a first-person account from someone with ADHD or Autism about their experiences with productivity tools. (Hint: Look for blog posts, videos, or community discussions.)
-I read a first-person blog post by someone with ADHD about their experience using productivity tools. They explained that traditional productivity methods did not work for them, so they chose tools like planners and distraction-blocking apps that better suited how their brain works. This helped me understand that productivity systems should be flexible and adapted to individual needs.
+I read a "My Daily Work Routine and 4 Productivity Tools That Help Me Get Things Done" by Kate Arends with ADHD about their experience using productivity tools. 
+One insight that stood out to me was when she described needing systems that “work with my brain instead of against it.” This made me realize that productivity tools should not force users into rigid structures.
+Another meaningful point was how she relies on simple, consistent tools rather than complicated systems. She emphasized that too many features can create decision fatigue. That helped me understand why minimal design is especially important for users with ADHD.
+This article changed my perspective because I previously thought adding more features makes a tool more powerful. Now I understand that for neurodivergent users, simplicity and flexibility are more valuable than complexity.
 
 <url="https://witanddelight.com/2025/02/work-routine-productivity-tools-for-adhd/">
 
 ### Identify one design or communication improvement that could make Focus Bear more accessible.
 I feel like there are lots of features which is overwhelming. If this app is suppose to be for neurodivergent individuals, it should be more simple and accesible for the users.
+One design improvement would be simplifying the dashboard interface. Currently, there are multiple sections displayed at once, such as goals, habits, timers, analytics, and notifications. For someone with ADHD, seeing too many options immediately can create cognitive overload.
+A concrete change would be introducing a “Focus Mode” that hides all non-essential features and shows only one active task at a time. Users could toggle between full view and simplified view depending on their needs. This would reduce visual clutter and make it easier to start tasks without feeling overwhelmed.
 
 ### Practice writing a clear, patient, and supportive response to a hypothetical user struggling with executive functioning.
-Let's slow it down. It's okay to struggle. You can take time. We can do step-by-step together. 
+I understand how frustrating executive functioning challenges can feel. It’s completely okay to struggle with starting tasks or staying focused, you’re not lazy or incapable.
+Let’s break it down into something smaller. Instead of thinking about finishing the whole task, could we try just opening the document or working on it for 5 minutes? Often starting is the hardest part.
