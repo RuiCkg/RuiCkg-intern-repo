@@ -44,4 +44,14 @@ https://github.com/RuiCkg/RuiCkg-intern-repo/commit/ef9dc88ff8b5383464b2d6bf857b
 
 ### A well-structured commit message.
 Test line 3
+https://github.com/RuiCkg/RuiCkg-intern-repo/commit/652eaea854b1e74bb3d09b4199d905365052402e
+
+## What makes a good commit message?
+As I mentioned in Research best practices for writing commit messages above.
+
+## How does a clear commit message help in team collaboration?
+Clear commit messages save time for everyone. Teammates can understand the purpose of a change without opening every diff, which makes reviews, debugging, and handovers easier
+
+## How can poor commit messages cause issues later?
+There would be tons of commits you have to look at and if there are poor commits, it can be really hard to find certain commits and keep track of the history of the code.
 
