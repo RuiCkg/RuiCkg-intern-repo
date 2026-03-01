@@ -37,8 +37,11 @@ I noticed that reviewers focus heavily on clarity and maintainability, even for 
 ## Make three commits in your repo with different commit message styles:
 ### A vague commit message (e.g., "fixed stuff").
 Test line 1
-
+https://github.com/RuiCkg/RuiCkg-intern-repo/commit/663d6f5af014d20859fb674f352b9d4630a5629a
 ### An overly detailed commit message.
 Test line 2
+https://github.com/RuiCkg/RuiCkg-intern-repo/commit/ef9dc88ff8b5383464b2d6bf857b4b4aad96d971
 
 ### A well-structured commit message.
+Test line 3
+
