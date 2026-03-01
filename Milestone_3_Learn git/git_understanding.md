@@ -37,5 +37,8 @@ I noticed that reviewers focus heavily on clarity and maintainability, even for 
 ## Make three commits in your repo with different commit message styles:
 ### A vague commit message (e.g., "fixed stuff").
 Test line 1
-An overly detailed commit message.
-A well-structured commit message.
+
+### An overly detailed commit message.
+Test line 2
+
+### A well-structured commit message.
