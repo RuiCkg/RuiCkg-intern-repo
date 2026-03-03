@@ -58,4 +58,10 @@ There would be tons of commits you have to look at and if there are poor commits
 
 # Understand git bisect #49
 ## Research git bisect and how it helps in debugging.
+git bisect is a powerful Git command that uses a binary search algorithm to efficiently find the specific commit in a project's history that introduced a bug or unwanted change. 
 
+## Create a test scenario:
+### Make a series of commits in your test repo.
+- commit 1: 
+Introduce a bug in one of the commits.
+Use git bisect to track down the commit that introduced the issue.
