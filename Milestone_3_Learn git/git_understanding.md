@@ -55,3 +55,7 @@ Clear commit messages save time for everyone. Teammates can understand the purpo
 ## How can poor commit messages cause issues later?
 There would be tons of commits you have to look at and if there are poor commits, it can be really hard to find certain commits and keep track of the history of the code.
 
+
+# Understand git bisect #49
+## Research git bisect and how it helps in debugging.
+
