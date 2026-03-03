@@ -63,5 +63,6 @@ git bisect is a powerful Git command that uses a binary search algorithm to effi
 ## Create a test scenario:
 ### Make a series of commits in your test repo.
 - commit 1: 
+- commit 2: refactor: coerce inputs to number
 Introduce a bug in one of the commits.
 Use git bisect to track down the commit that introduced the issue.
