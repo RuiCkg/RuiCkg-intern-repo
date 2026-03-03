@@ -66,4 +66,32 @@ git bisect is a powerful Git command that uses a binary search algorithm to effi
 - commit 2: refactor: coerce inputs to number
 - commit 3: refactor: adjust math logic
 - commit 4: docs: add note
+To test, I used git bisect start, then git bisect bad to mark this current commit as bad, went back and found a commit where there was no bug using git log --oneline and marked it good with git bisect good <commit-hash>.
 
+![alt text](images/bisect.png)
+![alt text](images/bisect2.png)
+
+## What does git bisect do?
+git bisect is a powerful Git command that uses a binary search algorithm to efficiently find the specific commit in a project's history that introduced a bug or unwanted change. 
+
+## When would you use it in a real-world debugging situation?
+In a situation where the issue wasn't immediately caught and the history spans many commits.
+
+## How does it compare to manually reviewing commits?
+git bisect is a powerful, automated binary search tool used to find the exact commit that introduced a bug, reducing hundreds of commits to a few tests in logarithmic time (O(log n)
+). In contrast, manual review is a linear, time-consuming process that involves checking each commit one by one.
+
+
+# Advanced Git Commands & When to Use Them
+
+## What does each command do?
+git checkout main -- <file> – Restore a specific file from main without affecting other changes.
+git cherry-pick <commit> – Apply a specific commit from another branch without merging the whole branch.
+git log – View commit history and understand how changes evolved.
+git blame <file> – See who last modified each line in a file and when.
+
+## When would you use it in a real project (hint: these are all really important in long running projects with multiple developers)?
+I'm definitely going to use checkout a lot, it's perfect for when I go down a rabbit hole and just need to get back to a version that actually works. cherry-pick is a great backup for those times I start coding without checking which branch I’m on. I also like the idea of blame, it'll make it much easier to track down why someone tweaked my code so I can just go ask them about it.
+
+## What surprised you while testing these commands?
+The biggest surprises were the precision of single-file restores and the fact that cherry-pick creates an entirely new commit hash rather than moving the original. Additionally, using git log --oneline and git blame with line ranges proved to be the most efficient way to audit history directly from the terminal.
