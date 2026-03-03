@@ -95,3 +95,6 @@ I'm definitely going to use checkout a lot, it's perfect for when I go down a ra
 
 ## What surprised you while testing these commands?
 The biggest surprises were the precision of single-file restores and the fact that cherry-pick creates an entirely new commit hash rather than moving the original. Additionally, using git log --oneline and git blame with line ranges proved to be the most efficient way to audit history directly from the terminal.
+
+#  Merge Conflicts & Conflict Resolution
+Merge conflicts in Git occur when the same lines of a file or the same files are modified differently on two separate branches that are being merged, and Git cannot automatically decide which version to keep. Manual intervention is required to resolve these conflicts.
