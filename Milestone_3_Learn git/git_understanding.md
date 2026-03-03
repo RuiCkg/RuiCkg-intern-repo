@@ -64,5 +64,6 @@ git bisect is a powerful Git command that uses a binary search algorithm to effi
 ### Make a series of commits in your test repo.
 - commit 1: chore: add sum script
 - commit 2: refactor: coerce inputs to number
-- commit 3: refactor: adjust math logi
+- commit 3: refactor: adjust math logic
+- commit 4: docs: add note
 
