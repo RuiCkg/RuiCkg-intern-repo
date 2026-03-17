@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "cspell": "^9.7.0",
+    "husky": "^9.1.7",
+    "markdownlint-cli2": "^0.21.0"
+  },
+  "scripts": {
+    "prepare": "husky",
+    "lint:md": "markdownlint-cli2 \"Milestone_4_Clean Code/ci_cd_reflection.md\"",
+    "spellcheck": "cspell \"Milestone_4_Clean Code/ci_cd_reflection.md\"",
+    "check:docs": "npm run lint:md && npm run spellcheck"
+  }
+}
