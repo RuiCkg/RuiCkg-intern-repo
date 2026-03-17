@@ -198,6 +198,68 @@ Unit tests help keep code clean by encouraging developers to write small, simple
 
 While testing, I found that the function needed to properly handle edge cases such as division by zero and invalid input types. Without these checks, the function could return unexpected results or fail. Writing unit tests helped identify these problems and improve the reliability of the function.
 
+# Refactoring Code for Simplicity
+
+### Research common refactoring techniques.
+
+* **Remove duplication**
+
+  * Avoid repeating the same code by reusing functions or variables.
+
+* **Rename variables and functions**
+
+  * Use clear and meaningful names to improve readability.
+
+* **Extract functions**
+
+  * Break large functions into smaller, focused functions.
+
+* **Simplify conditional logic**
+
+  * Replace complex nested conditions with simpler logic or guard clauses.
+
+* **Remove unnecessary code**
+
+  * Delete unused variables or redundant steps.
+
+---
+
+### Example of overly complicated code
+
+```python
+def check_even(number):
+    result = False
+    if number % 2 == 0:
+        result = True
+    else:
+        result = False
+
+    if result == True:
+        return True
+    else:
+        return False
+```
+
+---
+
+### Refactored (simplified) version
+
+```python
+def check_even(number):
+    return number % 2 == 0
+```
+
+---
+
+### What made the original code complex?
+
+The original code was unnecessarily long and repetitive. It used extra variables and multiple conditional statements that did not add value. This made the code harder to read and understand.
+
+---
+
+### How did refactoring improve it?
+
+Refactoring improved the code by removing unnecessary steps and simplifying the logic into a single line. This made the code cleaner, easier to read, and more maintainable while keeping the same functionality.
 # Commenting & Documentation
 
 ### Research best practices for writing comments and documentation.
