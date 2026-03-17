@@ -52,7 +52,7 @@ if a > 5 and b < 10:
 
 # Handling Errors & Edge Cases - Rui Chosa
 
-## 🔍 What was the issue with the original code?
+##  What was the issue with the original code?
 
 The original code did not handle errors or edge cases properly. It assumed that all inputs were valid and did not check for incorrect or unexpected values.
 
