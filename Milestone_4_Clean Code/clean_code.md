@@ -494,3 +494,65 @@ Duplicated code makes programs harder to maintain because the same logic exists 
 ### How did refactoring improve maintainability?
 
 Refactoring improved maintainability by centralising the logic into a single function. This reduces repetition, makes updates easier, and ensures consistent behaviour across the program.
+
+# Naming Variables & Functions
+
+### Research best practices for naming variables and functions.
+
+* **Use meaningful names**
+
+  * Names should clearly describe the purpose of the variable or function.
+
+* **Be consistent**
+
+  * Follow a consistent naming style (e.g., camelCase or snake_case).
+
+* **Avoid abbreviations**
+
+  * Use full words instead of unclear abbreviations.
+
+* **Use descriptive verbs for functions**
+
+  * Function names should describe actions (e.g., `calculateTotal`, `getUserData`).
+
+* **Keep names concise but clear**
+
+  * Avoid names that are too short or too long.
+
+---
+
+### Example of unclear variable names
+
+```python
+def calc(a, b):
+    c = a * b
+    return c
+```
+
+---
+
+### Refactored version with better naming
+
+```python
+def calculate_area(width, height):
+    area = width * height
+    return area
+```
+
+---
+
+### What makes a good variable or function name?
+
+A good name is clear, descriptive, and easy to understand. It should reflect the purpose of the variable or function so that other developers can quickly understand the code without additional explanation.
+
+---
+
+### What issues can arise from poorly named variables?
+
+Poorly named variables can make code confusing and difficult to read. This increases the chance of bugs, makes debugging harder, and slows down development because other developers need more time to understand the code.
+
+---
+
+### How did refactoring improve code readability?
+
+Refactoring improved readability by replacing unclear names with descriptive ones. This made the code easier to understand at a glance and reduced the need for additional comments.
