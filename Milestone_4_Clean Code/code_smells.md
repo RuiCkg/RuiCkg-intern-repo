@@ -15,8 +15,8 @@ function calculateDiscount(price) {
   return price * 0.2;
 }
 
-if (userRole === "admin") {
-  console.log("Access granted");
+if (userRole === 'admin') {
+  console.log('Access granted');
 }
 ```
 
@@ -24,14 +24,14 @@ Refactored:
 
 ```js
 const DISCOUNT_RATE = 0.2;
-const ADMIN_ROLE = "admin";
+const ADMIN_ROLE = 'admin';
 
 function calculateDiscount(price) {
   return price * DISCOUNT_RATE;
 }
 
 if (userRole === ADMIN_ROLE) {
-  console.log("Access granted");
+  console.log('Access granted');
 }
 ```
 
@@ -46,11 +46,11 @@ Bad example:
 
 ```js
 function processOrder(order) {
-  console.log("Checking stock");
-  console.log("Calculating total");
-  console.log("Applying discount");
-  console.log("Generating receipt");
-  console.log("Sending email");
+  console.log('Checking stock');
+  console.log('Calculating total');
+  console.log('Applying discount');
+  console.log('Generating receipt');
+  console.log('Sending email');
 }
 ```
 
@@ -58,23 +58,23 @@ Refactored:
 
 ```js
 function checkStock() {
-  console.log("Checking stock");
+  console.log('Checking stock');
 }
 
 function calculateTotal() {
-  console.log("Calculating total");
+  console.log('Calculating total');
 }
 
 function applyDiscount() {
-  console.log("Applying discount");
+  console.log('Applying discount');
 }
 
 function generateReceipt() {
-  console.log("Generating receipt");
+  console.log('Generating receipt');
 }
 
 function sendEmail() {
-  console.log("Sending email");
+  console.log('Sending email');
 }
 
 function processOrder() {
@@ -169,7 +169,7 @@ function access(user) {
   if (user) {
     if (user.isActive) {
       if (user.isAdmin) {
-        console.log("Access granted");
+        console.log('Access granted');
       }
     }
   }
@@ -184,7 +184,7 @@ function access(user) {
     return;
   }
 
-  console.log("Access granted");
+  console.log('Access granted');
 }
 ```
 
@@ -200,7 +200,7 @@ Bad example:
 ```js
 function greet() {
   // console.log("Old greeting");
-  console.log("Hello user");
+  console.log('Hello user');
 }
 ```
 
@@ -208,7 +208,7 @@ Refactored:
 
 ```js
 function greet() {
-  console.log("Hello user");
+  console.log('Hello user');
 }
 ```
 
@@ -222,7 +222,7 @@ Removing commented-out code keeps the codebase clean and easier to understand.
 Bad example:
 
 ```js
-let x = "Rui";
+let x = 'Rui';
 let user_age = 24;
 let Data = [];
 ```
@@ -230,7 +230,7 @@ let Data = [];
 Refactored:
 
 ```js
-const userName = "Rui";
+const userName = 'Rui';
 const userAge = 24;
 const userData = [];
 ```

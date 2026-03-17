@@ -1,13 +1,20 @@
 {
   "devDependencies": {
     "cspell": "^9.7.0",
+    "eslint": "^8.57.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
     "husky": "^9.1.7",
-    "markdownlint-cli2": "^0.21.0"
+    "markdownlint-cli2": "^0.21.0",
+    "prettier": "^3.8.1"
   },
   "scripts": {
     "prepare": "husky",
     "lint:md": "markdownlint-cli2 \"Milestone_4_Clean Code/ci_cd_reflection.md\"",
     "spellcheck": "cspell \"Milestone_4_Clean Code/ci_cd_reflection.md\"",
-    "check:docs": "npm run lint:md && npm run spellcheck"
+    "check:docs": "npm run lint:md && npm run spellcheck",
+    "lint": "eslint .",
+    "format": "prettier --write ."
   }
 }
