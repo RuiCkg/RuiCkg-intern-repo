@@ -434,3 +434,63 @@ Breaking down functions makes code easier to understand, test, and maintain. Eac
 ### How did refactoring improve the structure of the code?
 
 Refactoring improved the structure by separating responsibilities into smaller functions. This made the code more readable, reusable, and easier to modify without affecting other parts of the program.
+
+# Avoiding Code Duplication
+
+### Research the "Don't Repeat Yourself" (DRY) principle.
+
+* **DRY principle**
+
+  * Code should not be repeated unnecessarily. Each piece of logic should exist in only one place.
+
+* **Why DRY is important**
+
+  * Reduces bugs by avoiding inconsistent updates
+  * Makes code easier to maintain
+  * Improves readability
+  * Saves time when making changes
+
+---
+
+### Example of duplicated code
+
+```python id="x91a2b"
+def calculate_area_rectangle(width, height):
+    return width * height
+
+
+def calculate_area_square(side):
+    return side * side
+
+
+def calculate_area_triangle(base, height):
+    return 0.5 * base * height
+```
+
+---
+
+### Refactored code (eliminating duplication)
+
+```python id="k72mz1"
+def calculate_area(shape, a, b=None):
+    if shape == "rectangle":
+        return a * b
+    elif shape == "square":
+        return a * a
+    elif shape == "triangle":
+        return 0.5 * a * b
+    else:
+        return None
+```
+
+---
+
+### What were the issues with duplicated code?
+
+Duplicated code makes programs harder to maintain because the same logic exists in multiple places. If a change is needed, it must be updated everywhere, which increases the risk of mistakes and inconsistencies.
+
+---
+
+### How did refactoring improve maintainability?
+
+Refactoring improved maintainability by centralising the logic into a single function. This reduces repetition, makes updates easier, and ensures consistent behaviour across the program.
