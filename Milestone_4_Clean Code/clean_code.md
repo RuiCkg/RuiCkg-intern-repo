@@ -196,4 +196,4 @@ Unit tests help keep code clean by encouraging developers to write small, simple
 
 ### What issues did you find while testing?
 
-While testing, I found that the function needed to properly handle edge cases such as division by zero and invalid input types. Without these checks, the function could return unexpected results or fail. Writing unit tests helped identify these problems and improve the reliability of the function.
+I found that the function needed to properly handle edge cases such as division by zero and invalid input types. Without these checks, the function could return unexpected results or fail. Writing unit tests helped identify these problems and improve the reliability of the function.
