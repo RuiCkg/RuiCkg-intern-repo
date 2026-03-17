@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+
 # This is a test (main)
-gkljkljkdj
-=======
+
+# gkljkljkdj
+
 # This is a test (branch)
->>>>>>> b602c5e842266155b73e24da14b709aa0ef40cf5
+
+> > > > > > > b602c5e842266155b73e24da14b709aa0ef40cf5

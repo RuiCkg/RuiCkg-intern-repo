@@ -11,8 +11,5 @@
     "Husky",
     "Kanban"
   ],
-  "ignorePaths": [
-    "node_modules",
-    "package-lock.json"
-  ]
+  "ignorePaths": ["node_modules", "package-lock.json"]
 }
