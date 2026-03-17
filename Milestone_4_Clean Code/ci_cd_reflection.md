@@ -10,10 +10,14 @@ CI helps developers automatically test and check code whenever new changes are p
 
 CD extends this process by automatically preparing or deploying the application after the checks pass.
 
-### Set up a CI workflow that runs Markdown linting and spell checks on PRs in your repo.
-### Experiment with Git Hooks (e.g., Husky) to enforce linting before commits.
-### Open a test PR in your repository and review the automated checks.
-### Push your CI/CD configuration to your repo.
+### Set up a CI workflow that runs Markdown linting and spell checks on PRs in your repo
+
+### Experiment with Git Hooks (e.g., Husky) to enforce linting before commits
+
+### Open a test PR in your repository and review the automated checks
+
+### Push your CI/CD configuration to your repo
+
 ![alt text](<images/CI CD Workflows.png>)
 
 ### What is the purpose of CI/CD
