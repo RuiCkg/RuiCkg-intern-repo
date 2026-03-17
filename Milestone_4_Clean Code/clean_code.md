@@ -52,7 +52,7 @@ if a > 5 and b < 10:
 
 # Handling Errors & Edge Cases - Rui Chosa
 
-## 🔍 What was the issue with the original code?
+##  What was the issue with the original code?
 
 The original code did not handle errors or edge cases properly. It assumed that all inputs were valid and did not check for incorrect or unexpected values.
 
@@ -113,4 +113,169 @@ Key benefits include:
 * Makes debugging easier
 * Improves user experience with clear error messages
 * Ensures the program handles edge cases safely
+
+# Unit Testing
+
+### Research the importance of unit testing in software development.
+
+* **Finds bugs early**
+
+  * Helps detect issues before they become bigger problems in the application.
+
+* **Improves reliability**
+
+  * Ensures functions work correctly for both normal and edge cases.
+
+* **Encourages clean code**
+
+  * Developers write smaller, simpler, and more focused functions that are easier to test.
+
+* **Supports safe refactoring**
+
+  * Code can be improved or changed without breaking functionality because tests verify behaviour.
+
+* **Saves time**
+
+  * Fixing bugs early is faster than debugging complex systems later.
+
+---
+
+### Choose a testing framework.
+
+* **Framework chosen: PyTest**
+
+  * PyTest is simple, readable, and widely used for Python testing.
+  * It allows writing clean and easy-to-understand test cases.
+
+---
+
+### Function to test
+
+```python
+def divide_numbers(a, b):
+    if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
+        return None
+
+    if b == 0:
+        return None
+
+    return a / b
+```
+
+---
+
+### Unit tests for the function
+
+```python
+from your_file_name import divide_numbers
+
+
+def test_divide_numbers_normal():
+    assert divide_numbers(10, 2) == 5
+
+
+def test_divide_numbers_zero():
+    assert divide_numbers(10, 0) is None
+
+
+def test_divide_numbers_invalid_input():
+    assert divide_numbers("a", 2) is None
+
+
+def test_divide_numbers_float():
+    assert divide_numbers(7.5, 2.5) == 3
+```
+
+---
+![alt text](images/image.png)
+### How do unit tests help keep code clean?
+
+Unit tests help keep code clean by encouraging developers to write small, simple, and focused functions. Code that is easy to test is usually easier to read and maintain. Unit tests also help ensure that the code behaves correctly, which reduces bugs and improves overall quality.
+
+---
+
+### What issues did you find while testing?
+
+While testing, I found that the function needed to properly handle edge cases such as division by zero and invalid input types. Without these checks, the function could return unexpected results or fail. Writing unit tests helped identify these problems and improve the reliability of the function.
+
+# Commenting & Documentation
+
+### Research best practices for writing comments and documentation.
+
+* **Write clear and meaningful comments**
+
+  * Comments should explain *why* something is done, not just *what* the code does.
+
+* **Keep comments concise**
+
+  * Avoid long or unnecessary explanations that make code harder to read.
+
+* **Update comments when code changes**
+
+  * Outdated comments can be misleading and cause confusion.
+
+* **Use consistent style**
+
+  * Follow a consistent format for comments and documentation across the project.
+
+* **Document complex logic**
+
+  * Add comments for complicated or non-obvious parts of the code.
+
+---
+
+### Example of poorly commented code
+
+```python
+def calculate_discount(price, discount):
+    # calculate
+    result = price - (price * discount)
+    return result
+```
+
+---
+
+### Improved version with better comments
+
+```python
+def calculate_discount(price, discount):
+    """
+    Calculate the final price after applying a discount.
+
+    Args:
+        price (float): Original price of the item
+        discount (float): Discount rate (e.g., 0.2 for 20%)
+
+    Returns:
+        float: Final price after discount
+    """
+
+    # Apply discount formula: final price = original price - discount amount
+    result = price - (price * discount)
+    return result
+```
+
+---
+
+### When should you add comments?
+
+* When the logic is complex or not obvious
+* When explaining the purpose of a function
+* When there are important assumptions or edge cases
+* When the code interacts with external systems (API, database, etc.)
+
+---
+
+### When should you avoid comments and instead improve the code?
+
+* When the code is already clear and self-explanatory
+* When comments simply repeat what the code does
+* When better variable or function names can explain the logic
+* When comments become outdated easily
+
+---
+
+### Reflection
+
+Writing good comments helps improve code readability and makes it easier for others (and future myself) to understand the purpose of the code. However, too many unnecessary comments can make the code cluttered. I learned that it is better to write clean and readable code first, and then add comments only where they provide real value.
 
