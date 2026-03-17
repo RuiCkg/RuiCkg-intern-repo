@@ -341,3 +341,96 @@ def calculate_discount(price, discount):
 
 Writing good comments helps improve code readability and makes it easier for others (and future myself) to understand the purpose of the code. However, too many unnecessary comments can make the code cluttered. I learned that it is better to write clean and readable code first, and then add comments only where they provide real value.
 
+# Writing Small, Focused Functions
+
+### Research best practices for writing small, single-purpose functions.
+
+* **Single responsibility**
+
+  * Each function should do one thing only.
+
+* **Keep functions short**
+
+  * Smaller functions are easier to read and maintain.
+
+* **Use clear names**
+
+  * Function names should clearly describe what they do.
+
+* **Avoid deep nesting**
+
+  * Simplify logic to make functions easier to follow.
+
+* **Reuse functions**
+
+  * Break logic into reusable parts instead of repeating code.
+
+---
+
+### Example of a long, complex function
+
+```python id="s8k2x1"
+def process_order(order):
+    total = 0
+
+    # Calculate total
+    for item in order:
+        total += item["price"] * item["quantity"]
+
+    # Apply discount
+    if total > 100:
+        total = total * 0.9
+
+    # Print receipt
+    print("Order Summary:")
+    for item in order:
+        print(item["name"], item["quantity"], item["price"])
+
+    print("Total:", total)
+
+    return total
+```
+
+---
+
+### Refactored into smaller functions
+
+```python id="2kq7m9"
+def calculate_total(order):
+    total = 0
+    for item in order:
+        total += item["price"] * item["quantity"]
+    return total
+
+
+def apply_discount(total):
+    if total > 100:
+        return total * 0.9
+    return total
+
+
+def print_receipt(order, total):
+    print("Order Summary:")
+    for item in order:
+        print(item["name"], item["quantity"], item["price"])
+    print("Total:", total)
+
+
+def process_order(order):
+    total = calculate_total(order)
+    total = apply_discount(total)
+    print_receipt(order, total)
+    return total
+```
+
+---
+
+### Why is breaking down functions beneficial?
+
+Breaking down functions makes code easier to understand, test, and maintain. Each function has a clear purpose, which reduces complexity and makes debugging simpler.
+
+---
+
+### How did refactoring improve the structure of the code?
+
+Refactoring improved the structure by separating responsibilities into smaller functions. This made the code more readable, reusable, and easier to modify without affecting other parts of the program.
