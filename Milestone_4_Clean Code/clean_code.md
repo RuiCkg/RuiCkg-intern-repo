@@ -49,3 +49,68 @@ if a > 5 and b < 10:
     c = a + b
     print(c)
 ```
+
+# Handling Errors & Edge Cases - Rui Chosa
+
+## 🔍 What was the issue with the original code?
+
+The original code did not handle errors or edge cases properly. It assumed that all inputs were valid and did not check for incorrect or unexpected values.
+
+For example, dividing by zero or passing non-numeric values could lead to unexpected results such as `Infinity` or `NaN`. This makes the code unreliable and difficult to debug.
+
+---
+
+## Example of messy code
+
+```javascript
+function divide(a, b) {
+  return a / b;
+}
+
+console.log(divide(10, 0));
+```
+
+### Issues:
+
+* No input validation
+* No handling for division by zero
+* Can return unexpected values like `Infinity`
+* Not safe for real-world use
+
+---
+
+## Refactored code (Improved version)
+
+```javascript
+function divide(a, b) {
+  // Validate input types
+  if (typeof a !== "number" || typeof b !== "number") {
+    console.error("Invalid input: both values must be numbers");
+    return null;
+  }
+
+  // Handle edge case: division by zero
+  if (b === 0) {
+    console.error("Cannot divide by zero");
+    return null;
+  }
+
+  return a / b;
+}
+
+console.log(divide(10, 0));
+```
+
+---
+
+## How does handling errors improve reliability?
+
+Handling errors improves reliability by ensuring the program behaves predictably even when unexpected inputs are provided.
+
+Key benefits include:
+
+* Prevents crashes and unexpected behavior
+* Makes debugging easier
+* Improves user experience with clear error messages
+* Ensures the program handles edge cases safely
+
