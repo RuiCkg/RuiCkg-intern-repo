@@ -52,7 +52,7 @@ if a > 5 and b < 10:
 
 # Handling Errors & Edge Cases - Rui Chosa
 
-## 🔍 What was the issue with the original code?
+##  What was the issue with the original code?
 
 The original code did not handle errors or edge cases properly. It assumed that all inputs were valid and did not check for incorrect or unexpected values.
 
@@ -260,3 +260,84 @@ The original code was unnecessarily long and repetitive. It used extra variables
 ### How did refactoring improve it?
 
 Refactoring improved the code by removing unnecessary steps and simplifying the logic into a single line. This made the code cleaner, easier to read, and more maintainable while keeping the same functionality.
+# Commenting & Documentation
+
+### Research best practices for writing comments and documentation.
+
+* **Write clear and meaningful comments**
+
+  * Comments should explain *why* something is done, not just *what* the code does.
+
+* **Keep comments concise**
+
+  * Avoid long or unnecessary explanations that make code harder to read.
+
+* **Update comments when code changes**
+
+  * Outdated comments can be misleading and cause confusion.
+
+* **Use consistent style**
+
+  * Follow a consistent format for comments and documentation across the project.
+
+* **Document complex logic**
+
+  * Add comments for complicated or non-obvious parts of the code.
+
+---
+
+### Example of poorly commented code
+
+```python
+def calculate_discount(price, discount):
+    # calculate
+    result = price - (price * discount)
+    return result
+```
+
+---
+
+### Improved version with better comments
+
+```python
+def calculate_discount(price, discount):
+    """
+    Calculate the final price after applying a discount.
+
+    Args:
+        price (float): Original price of the item
+        discount (float): Discount rate (e.g., 0.2 for 20%)
+
+    Returns:
+        float: Final price after discount
+    """
+
+    # Apply discount formula: final price = original price - discount amount
+    result = price - (price * discount)
+    return result
+```
+
+---
+
+### When should you add comments?
+
+* When the logic is complex or not obvious
+* When explaining the purpose of a function
+* When there are important assumptions or edge cases
+* When the code interacts with external systems (API, database, etc.)
+
+---
+
+### When should you avoid comments and instead improve the code?
+
+* When the code is already clear and self-explanatory
+* When comments simply repeat what the code does
+* When better variable or function names can explain the logic
+* When comments become outdated easily
+
+---
+
+### Reflection
+
+Writing good comments helps improve code readability and makes it easier for others (and future myself) to understand the purpose of the code. However, too many unnecessary comments can make the code cluttered. I learned that it is better to write clean and readable code first, and then add comments only where they provide real value.
+
