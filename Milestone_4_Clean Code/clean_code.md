@@ -197,3 +197,85 @@ Unit tests help keep code clean by encouraging developers to write small, simple
 ### What issues did you find while testing?
 
 While testing, I found that the function needed to properly handle edge cases such as division by zero and invalid input types. Without these checks, the function could return unexpected results or fail. Writing unit tests helped identify these problems and improve the reliability of the function.
+
+# Commenting & Documentation
+
+### Research best practices for writing comments and documentation.
+
+* **Write clear and meaningful comments**
+
+  * Comments should explain *why* something is done, not just *what* the code does.
+
+* **Keep comments concise**
+
+  * Avoid long or unnecessary explanations that make code harder to read.
+
+* **Update comments when code changes**
+
+  * Outdated comments can be misleading and cause confusion.
+
+* **Use consistent style**
+
+  * Follow a consistent format for comments and documentation across the project.
+
+* **Document complex logic**
+
+  * Add comments for complicated or non-obvious parts of the code.
+
+---
+
+### Example of poorly commented code
+
+```python
+def calculate_discount(price, discount):
+    # calculate
+    result = price - (price * discount)
+    return result
+```
+
+---
+
+### Improved version with better comments
+
+```python
+def calculate_discount(price, discount):
+    """
+    Calculate the final price after applying a discount.
+
+    Args:
+        price (float): Original price of the item
+        discount (float): Discount rate (e.g., 0.2 for 20%)
+
+    Returns:
+        float: Final price after discount
+    """
+
+    # Apply discount formula: final price = original price - discount amount
+    result = price - (price * discount)
+    return result
+```
+
+---
+
+### When should you add comments?
+
+* When the logic is complex or not obvious
+* When explaining the purpose of a function
+* When there are important assumptions or edge cases
+* When the code interacts with external systems (API, database, etc.)
+
+---
+
+### When should you avoid comments and instead improve the code?
+
+* When the code is already clear and self-explanatory
+* When comments simply repeat what the code does
+* When better variable or function names can explain the logic
+* When comments become outdated easily
+
+---
+
+### Reflection
+
+Writing good comments helps improve code readability and makes it easier for others (and future myself) to understand the purpose of the code. However, too many unnecessary comments can make the code cluttered. I learned that it is better to write clean and readable code first, and then add comments only where they provide real value.
+
