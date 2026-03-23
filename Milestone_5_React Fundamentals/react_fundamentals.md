@@ -106,4 +106,50 @@ One advantage is faster development and easier customization. Developers can qui
 
 However, one potential drawback is that class names can become long and harder to read. It may also be challenging for beginners to remember all utility classes.
 
+### Counter.js (Tailwind version)
+
+```jsx
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
+      <h2 className="text-2xl font-bold mb-4">Counter</h2>
+
+      <p className="text-xl mb-4">Count: {count}</p>
+
+      <button
+        onClick={() => setCount(count + 1)}
+        className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 active:bg-blue-700 transition"
+      >
+        Increment
+      </button>
+    </div>
+  );
+}
+```
+
+### Button.js (Reusable Tailwind component)
+
+```jsx
+function Button({ text, onClick }) {
+  return (
+    <button
+      onClick={onClick}
+      className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 active:bg-green-700 transition"
+    >
+      {text}
+    </button>
+  );
+}
+```
+
+In this task, I applied Tailwind CSS directly in my React components such as Counter.js and Button.js. I used utility classes like `flex`, `items-center`, and `justify-center` to center the layout, and classes like `bg-blue-500`, `text-white`, and `rounded` to style the button.
+
+I found Tailwind very efficient because I could quickly style components without writing separate CSS files. It made development faster and easier to adjust styles directly in JSX.
+
+However, I also found that class names can become long and slightly harder to read, especially when combining many utilities. Additionally, I initially faced issues with Tailwind setup due to version compatibility, which required troubleshooting.
+
+Overall, Tailwind improved my workflow once it was set up correctly.
+
 ![alt text](images/tailwind.png)
