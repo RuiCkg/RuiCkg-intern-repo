@@ -57,3 +57,9 @@ When working with lists in React, one common issue is using incorrect keys when 
 Another issue is directly mutating state, such as using array methods like push. Instead, we should create a new array using the spread operator to ensure React detects changes and re-renders properly.
 
 Additionally, forgetting to handle empty input can lead to unwanted blank items in the list.
+
+## Components & Props Reflection
+
+Components are important in React because they allow developers to break the UI into reusable and independent pieces. This makes the code easier to manage, maintain, and scale.
+
+Props allow data to be passed from one component to another, making components dynamic and reusable. By using props, the same component can display different data without rewriting code.
