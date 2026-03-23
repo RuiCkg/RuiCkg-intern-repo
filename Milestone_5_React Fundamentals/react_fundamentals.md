@@ -49,3 +49,11 @@ export default App;
 If we modify state directly instead of using `setState` or the setter function from `useState`, React may not detect the change properly. As a result, the component might not re-render, and the UI may not update as expected.
 
 This task helped me understand that state in React should always be updated using the provided setter function so that React can manage re-rendering correctly.
+
+## Working with Lists & User Input Reflection
+
+When working with lists in React, one common issue is using incorrect keys when rendering items. Using indexes as keys can cause problems when items are added or removed, leading to incorrect UI updates.
+
+Another issue is directly mutating state, such as using array methods like push. Instead, we should create a new array using the spread operator to ensure React detects changes and re-renders properly.
+
+Additionally, forgetting to handle empty input can lead to unwanted blank items in the list.
