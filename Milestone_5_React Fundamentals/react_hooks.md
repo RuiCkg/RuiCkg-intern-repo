@@ -14,4 +14,21 @@ If we don’t provide a dependency array, the effect runs on every render, which
 
 Improper use of useEffect, such as missing dependencies or unnecessary effects, can lead to infinite loops, slow performance, and unexpected behavior.
 
+## Implementation Evidence
+
+### Code Snippet
+
+```jsx
+useEffect(() => {
+  console.log("Component mounted");
+
+  return () => {
+    console.log("Component unmounted");
+  };
+}, []);
+```
+
+### GitHub Reference
+[EffectExample.js](https://github.com/RuiCkg/RuiCkg-intern-repo/blob/main/Milestone_5_React%20Fundamentals/react-practice-effect/src/EffectExample.js)
+
 ![alt text](image.png)

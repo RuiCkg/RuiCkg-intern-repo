@@ -58,14 +58,52 @@ Another issue is directly mutating state, such as using array methods like push.
 
 Additionally, forgetting to handle empty input can lead to unwanted blank items in the list.
 
+## Implementation Evidence
+
+### Code Snippet (ListExample.js)
+
+```jsx
+const [input, setInput] = useState("");
+const [items, setItems] = useState([]);
+
+const handleAddItem = () => {
+  if (input.trim() === "") return;
+  setItems([...items, input]);
+  setInput("");
+};
+
+```
+
 ## Components & Props Reflection
 
 Components are important in React because they allow developers to break the UI into reusable and independent pieces. This makes the code easier to manage, maintain, and scale.
 
 Props allow data to be passed from one component to another, making components dynamic and reusable. By using props, the same component can display different data without rewriting code.
 
+## Implementation Evidence
+
+### Code Snippet (HelloWorld.js)
+
+```jsx
+function HelloWorld({ name }) {
+  return <h2>Hello, {name}!</h2>;
+}
+```
+
+![alt text](images/components.png)
+
 ## Navigation with React Router Reflection
 
 Client-side routing allows a React application to switch between pages without reloading the entire browser page. This creates a faster and smoother user experience.
 
 One major advantage is improved performance because only the necessary components are updated instead of requesting a completely new page from the server. It also helps developers build more interactive single-page applications with a cleaner navigation flow.
+
+## Tailwind CSS Reflection
+
+Tailwind CSS allows developers to style components quickly using utility classes directly in the markup. This reduces the need for writing separate CSS files and helps maintain consistency across the project.
+
+One advantage is faster development and easier customization. Developers can quickly adjust spacing, colors, and layout without switching between files.
+
+However, one potential drawback is that class names can become long and harder to read. It may also be challenging for beginners to remember all utility classes.
+
+![alt text](images/tailwind.png)
