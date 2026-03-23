@@ -63,3 +63,9 @@ Additionally, forgetting to handle empty input can lead to unwanted blank items 
 Components are important in React because they allow developers to break the UI into reusable and independent pieces. This makes the code easier to manage, maintain, and scale.
 
 Props allow data to be passed from one component to another, making components dynamic and reusable. By using props, the same component can display different data without rewriting code.
+
+## Navigation with React Router Reflection
+
+Client-side routing allows a React application to switch between pages without reloading the entire browser page. This creates a faster and smoother user experience.
+
+One major advantage is improved performance because only the necessary components are updated instead of requesting a completely new page from the server. It also helps developers build more interactive single-page applications with a cleaner navigation flow.
