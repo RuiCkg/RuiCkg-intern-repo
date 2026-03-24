@@ -153,3 +153,74 @@ However, I also found that class names can become long and slightly harder to re
 Overall, Tailwind improved my workflow once it was set up correctly.
 
 ![alt text](images/tailwind.png)
+
+
+---
+
+## Setting up a React project
+
+During the setup process, I faced issues with Tailwind CSS configuration, especially related to PostCSS and version compatibility. Initially, Tailwind did not work due to incorrect setup and dependency conflicts.
+
+I resolved the issue by installing a compatible Tailwind CSS version (v3) and properly configuring the PostCSS and Tailwind configuration files.
+
+This experience helped me understand the importance of correct dependency versions and configuration when setting up frontend tools.
+
+```js (App.js)
+function App() {
+  return (
+    <div className="flex items-center justify-center h-screen bg-gray-100">
+      <h1 className="text-3xl font-bold text-blue-500">
+        Tailwind is working 
+      </h1>
+    </div>
+  );
+}
+
+export default App;
+```
+
+```md (READEME.md)
+# React + Tailwind Setup
+
+## Steps to set up the project
+
+1. Create a React app
+```bash
+npx create-react-app react-state-setup
+cd react-state-setup
+```
+2. Install Tailwind CSS
+```bash
+npm install -D tailwindcss@3.4.17 postcss autoprefixer
+npx tailwindcss init -p
+```
+
+3. Configure Tailwind
+Update tailwind.config.js:
+```js
+module.exports = {
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+```
+
+4. Add Tailwind to CSS
+Update src/index.css:
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+5. Run the project
+```bash
+npm start
+```
+
+
+![alt text](images/setup.png)
+
+
