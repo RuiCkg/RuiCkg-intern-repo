@@ -85,3 +85,63 @@ export default UseMemoExample;
 ```
 
 ![alt text](images/usememo.png)
+
+## useCallback Reflection
+
+useCallback is used to memoize functions so that they are not recreated on every render. This helps prevent unnecessary re-renders, especially when passing functions as props to child components.
+
+In this task, I passed a function to a child component and used React.memo to observe re-render behavior. By using useCallback, the function reference remained stable, preventing the child component from re-rendering when unrelated state changed.
+
+Unlike useMemo, which memoizes values, useCallback memoizes functions.
+
+useCallback is not always necessary and should be used when performance optimization is needed, especially in components with frequent re-renders.
+
+```js (Child.js)
+import React from "react";
+
+const Child = ({ onClick }) => {
+  console.log("Child rendered");
+
+  return (
+    <div>
+      <button onClick={onClick}>Click from Child</button>
+    </div>
+  );
+};
+
+export default React.memo(Child);
+```
+
+```js (UseCallbackExample.js)
+import { useState, useCallback } from "react";
+import Child from "./Child";
+
+function UseCallbackExample() {
+  const [count, setCount] = useState(0);
+  const [text, setText] = useState("");
+
+  const handleClick = useCallback(() => {
+    console.log("Button clicked");
+  }, []);
+
+  return (
+    <div style={{ padding: "20px" }}>
+      <h2>useCallback Example</h2>
+
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+
+      <input
+        type="text"
+        placeholder="Type something"
+        onChange={(e) => setText(e.target.value)}
+      />
+
+      <Child onClick={handleClick} />
+    </div>
+  );
+}
+
+export default UseCallbackExample;
+```
+![alt text](images/callback.png)
