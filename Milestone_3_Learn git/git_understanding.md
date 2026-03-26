@@ -106,23 +106,80 @@ In a situation where the issue wasn't immediately caught and the history spans m
 git bisect is a powerful, automated binary search tool used to find the exact commit that introduced a bug, reducing hundreds of commits to a few tests in logarithmic time (O(log n)
 ). In contrast, manual review is a linear, time-consuming process that involves checking each commit one by one.
 
-# Advanced Git Commands & When to Use Them
+# Advanced Git Commands 
 
-## What does each command do?
+## git checkout main -- <file>
 
-git checkout main -- <file> – Restore a specific file from main without affecting other changes.
-git cherry-pick <commit> – Apply a specific commit from another branch without merging the whole branch.
-git log – View commit history and understand how changes evolved.
-git blame <file> – See who last modified each line in a file and when.
+I modified a file in my project and then ran:
+git checkout main -- test.txt
 
-## When would you use it in a real project (hint: these are all really important in long running projects with multiple developers)?
+This restored the file back to the version from the main branch. I noticed that my changes were completely removed, and `git status` no longer showed the file as modified.
 
-I'm definitely going to use checkout a lot, it's perfect for when I go down a rabbit hole and just need to get back to a version that actually works. cherry-pick is a great backup for those times I start coding without checking which branch I’m on. I also like the idea of blame, it'll make it much easier to track down why someone tweaked my code so I can just go ask them about it.
+This command is useful when I want to discard changes in a specific file without affecting other files.
 
-## What surprised you while testing these commands?
 
-The biggest surprises were the precision of single-file restores and the fact that cherry-pick creates an entirely new commit hash rather than moving the original. Additionally, using git log --oneline and git blame with line ranges proved to be the most efficient way to audit history directly from the terminal.
+## git cherry-pick <commit>
 
-# Merge Conflicts & Conflict Resolution
+I created a new branch and made a commit there. Then I switched back to main and ran:
+git cherry-pick <commit-hash>
 
-Merge conflicts in Git occur when the same lines of a file or the same files are modified differently on two separate branches that are being merged, and Git cannot automatically decide which version to keep. Manual intervention is required to resolve these conflicts.
+This applied that specific commit to the main branch. I saw a new commit added in `git log` with the same message but a different commit hash.
+
+This is useful when I want to move a specific feature or fix without merging the whole branch.
+
+
+## git log
+
+I ran:
+git log
+
+This showed a list of commits with commit hashes, author names, and timestamps. I could clearly see my recent commit messages and track what changes I made.
+
+This is useful for understanding the history of the project and debugging issues.
+
+
+## git blame <file>
+
+I ran:
+git blame test.txt
+
+This showed each line of the file along with the commit hash and author who last modified it. I could see exactly which part of the file I changed and when.
+
+This is useful when working in a team to identify who made specific changes.
+
+
+## What surprised me
+
+I was surprised that `git cherry-pick` creates a new commit instead of copying the original commit exactly. Also, `git blame` was very detailed and showed line-by-line history, which I didn’t expect.
+
+![alt text](images/advanced.png)
+
+# Git Concepts: Staging vs. Committing 
+
+## What is the difference between staging and committing?
+
+Staging means preparing changes for the next commit. It lets me choose which files or changes I want to include before saving them.
+
+Committing means saving the staged changes into Git history as a snapshot. Once I commit, the changes are recorded in the repository.
+
+## Why does Git separate these two steps?
+
+Git separates staging and committing so developers can control exactly what goes into each commit. This helps keep commits clean and organised.
+
+For example, if I change two files but only want to save one of them first, I can stage only that file and commit it.
+
+## When would you want to stage changes without committing?
+
+I would stage changes without committing when I want to check my work first, review which files are included, or prepare only part of my work for a commit.
+
+This is useful when I have made multiple changes but want to create smaller and clearer commits.
+
+## My experiment
+
+I modified a file in my repository and checked the status with `git status`. Git showed the file as modified.
+
+Then I used `git add <file>` to stage it. After that, `git status` showed the file in the staging area.
+
+Next, I used `git reset HEAD <file>` to unstage it. Git then showed it as modified again, but not staged.
+
+Finally, I staged the file again and committed it with `git commit -m "Test staging vs committing"`. This showed me that staging only prepares changes, while committing actually saves them in Git history.
