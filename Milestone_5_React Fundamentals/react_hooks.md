@@ -35,11 +35,19 @@ useEffect(() => {
 
 ## useMemo Reflection
 
-useMemo is used to optimize performance by memoizing the result of expensive calculations. It prevents unnecessary recalculations when the component re-renders.
+### When should you avoid using useMemo?
 
-In this task, I used useMemo to cache the result of a heavy computation based on the count value. This ensured that the calculation only ran when the count changed, and not when other state values like input text changed.
+You should avoid using useMemo when the calculation is simple or not expensive. For example, basic operations like addition or simple filtering do not need memoization. In these cases, using useMemo can add unnecessary complexity and make the code harder to read without improving performance.
 
-This improves performance, especially in components with expensive operations.
+useMemo is also not useful if the component does not re-render often, because there is no performance benefit.
+
+---
+
+### What happens if you remove useMemo from your implementation?
+
+If useMemo is removed, the calculation will run on every render instead of being cached. This may not cause issues for small or simple computations, but for expensive calculations (e.g., large data filtering or sorting), it can lead to slower performance and unnecessary re-computation.
+
+In my implementation, removing useMemo would cause the function to execute every time the component re-renders, which could make the UI less efficient if the calculation becomes heavy.
 
 ```js (UseMemoExample.js)
 import { useState, useMemo } from "react";
