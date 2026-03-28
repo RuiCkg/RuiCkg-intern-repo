@@ -183,3 +183,43 @@ Then I used `git add <file>` to stage it. After that, `git status` showed the fi
 Next, I used `git reset HEAD <file>` to unstage it. Git then showed it as modified again, but not staged.
 
 Finally, I staged the file again and committed it with `git commit -m "Test staging vs committing"`. This showed me that staging only prepares changes, while committing actually saves them in Git history.
+
+## Merge Conflicts & Conflict Resolution
+
+### What caused the conflict?
+
+I created a new branch called `conflict-test` and edited the same file (`test.txt`). Then I switched back to main and edited the same line differently.
+
+When I ran `git merge conflict-test`, Git showed this message:
+CONFLICT (content): Merge conflict in test.txt
+
+This happened because both branches modified the same part of the file.
+
+---
+
+### How did you resolve it?
+
+I opened the file and saw conflict markers:
+
+![alt text](images/conflict-merge.png)
+
+I manually edited the file and combined both changes into:
+Hello from main and test-conflict
+
+![alt text](images/resolved-conflict.png)
+
+Then I ran:
+git add test.txt  
+git commit -m "Resolved conflict"
+
+After that, the merge was completed successfully.
+
+---
+
+### What did you learn?
+
+I learned that merge conflicts happen when the same part of a file is changed in different branches.
+
+Git cannot decide which change is correct, so I need to manually fix it.
+
+This experience helped me understand how important it is to manage branches carefully and communicate with team members to avoid conflicts.
