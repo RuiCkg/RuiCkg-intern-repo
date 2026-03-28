@@ -223,3 +223,49 @@ I learned that merge conflicts happen when the same part of a file is changed in
 Git cannot decide which change is correct, so I need to manually fix it.
 
 This experience helped me understand how important it is to manage branches carefully and communicate with team members to avoid conflicts.
+
+## Branching & Team Collaboration
+
+### Why is pushing directly to main problematic?
+
+When I created a new branch (`feature-test`) and made a change, I noticed that the change only existed in that branch.
+
+When I switched back to main using `git checkout main`, the change was not there.
+
+This showed me that if I push directly to main, it can affect the main project immediately without testing. This is risky because it can break the project for everyone.
+
+---
+
+### How do branches help with reviewing code?
+
+Branches allow me to work on features separately without affecting the main branch.
+
+For example, I made a change in `feature-test`, and it stayed isolated from main. This means I can create a pull request and let others review my code before merging.
+
+Branch:
+
+![alt text](images/branch.png)
+
+Main:
+
+![alt text](images/main.png)
+
+This helps improve code quality and catch mistakes before they affect the main project.
+
+---
+
+### What happens if two people edit the same file on different branches?
+
+If two people edit the same file in different branches, Git will try to merge the changes.
+
+If they edit different parts, Git merges automatically. But if they edit the same line, a merge conflict occurs.
+
+I experienced this in the previous task, where Git asked me to manually resolve the conflict.
+
+---
+
+### What I observed
+
+After switching back to main, I confirmed that my changes from the branch were not visible.
+
+This helped me understand how branches isolate work and protect the main branch.
